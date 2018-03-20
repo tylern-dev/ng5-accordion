@@ -10,6 +10,7 @@ export class MenuDataService {
 
   constructor() { }
 
+  // serving the mock menu data
   getMenuData(): Observable<Menu[]> {
     return of(MENU);
   }
