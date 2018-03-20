@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
 
   constructor(private menuDataService: MenuDataService ) { }
 
+  // load data on init
   ngOnInit() {
     console.log(this.menuItems);
     this.getMenuData();
@@ -24,6 +25,7 @@ export class MenuComponent implements OnInit {
     this.menuDataService.getMenuData().subscribe(menuItems => this.menuItems = menuItems);
   }
 
+  // click event from template
   listClick(event, menu) {
     console.log(event);
     console.log(menu);
